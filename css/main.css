@@ -1,0 +1,77 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 50px;
+  background-color: #18191C;
+}
+
+.box {
+  display: flex;
+  width: 500px;
+}
+
+.box__child {
+  display: flex;
+  width: 200px;
+  height: 200px;
+}
+
+.box__child + .box__child {
+  margin-left: 50px;
+}
+
+.box__child__first {
+  align-items: flex-start;
+  justify-content: end;
+}
+
+.box__child__last {
+  align-items: flex-end;
+}
+
+.child {
+  border-radius: 25px;
+}
+
+.child__first {
+  width: 50px;
+  height: 50px;
+  background-color: #F498AD;
+  animation-name: circle-to-square;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+.child__last {
+  width: 200px;
+  height: 200px;
+  background-color: #2E9AFF;
+}
+
+@keyframes circle-to-square {
+  from {
+    width: 50px;
+    height: 50px;
+    background-color: #F498AD;
+  }
+  50% {
+    width: 50px;
+    height: 200px;
+    background-color: #7F6EDB;
+  }
+  to {
+    width: 200px;
+    height: 200px;
+    background-color: #2E9AFF;
+  }
+}
